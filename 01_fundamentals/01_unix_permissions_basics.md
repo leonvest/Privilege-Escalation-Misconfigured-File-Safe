@@ -59,3 +59,13 @@ stat -c "%a %n" /etc/passwd
 
 # Check writable
 [ -w /etc/passwd ] && echo "WARNING: File is writable"
+
+# Change permissions
+chmod 644 /etc/passwd
+
+# Change ownership
+chown root:root /etc/passwd
+
+# Set sticky bit
+chmod +t /shared_directory
+
