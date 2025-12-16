@@ -1,0 +1,46 @@
+/etc/passwd World-Writable Privilege Escalation Attack
+Attack Explanation
+
+What Happened?
+This attack exploits a critical misconfiguration where the /etc/passwd file has world-writable permissions (all users can write to it). By adding a new user with 
+UID 0 (root) and no password, an attacker can gain root privileges without authentication.
+
+Vulnerable Configuration:
+
+-rw-rw-rw- 1 root root /etc/passwd    # VULNERABLE
+-rw-r----- 1 root shadow /etc/shadow  # Secure
+
+Why It Works:
+
+* Historically, /etc/passwd stored password hashes
+
+* Modern systems use /etc/shadow for passwords
+
+* However, if a user has write access to /etc/passwd, they can create accounts
+
+* UID 0 always equals root, regardless of username
+
+
+
+
+
+Prevention Guide - Immediate Actions
+
+1. Check current permissions:
+
+ls -l /etc/passwd /etc/shadow
+
+
+2. Fix permissions:
+
+sudo chmod 644 /etc/passwd
+sudo chmod 640 /etc/shadow
+sudo chown root:root /etc/passwd
+sudo chown root:shadow /etc/shadow
+
+
+3. Check for malicious entries:
+
+grep ":0:" /etc/passwd
+
+
