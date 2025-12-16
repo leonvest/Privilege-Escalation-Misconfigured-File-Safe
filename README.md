@@ -5,6 +5,8 @@ This repository demonstrates and defends against a critical Linux privilege esca
 
 ⚠️ IMPORTANT: Use these tools responsibly and only on systems you own or have explicit permission to test.
 
+##
+
 🎯 Quick Navigation
 
 For Ethical Attackers (Educational/Testing)
@@ -16,6 +18,7 @@ File	Purpose	When to Use
 detection.sh	Check if your system is vulnerable	Daily/Weekly
 mitigation.sh	Fix vulnerabilities immediately	After detection
 
+##
 
 Important Legal Notice
 This repository and all associated tools, scripts, and documentation are provided for EDUCATIONAL, RESEARCH, and ETHICAL SECURITY TESTING PURPOSES ONLY. The authors and contributors assume NO RESPONSIBILITY and NO LIABILITY for any misuse, damage, or illegal activities conducted with this material.
