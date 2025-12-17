@@ -44,3 +44,8 @@ You may use this material **ONLY** for:
 - Authorized penetration testing on systems you own or have explicit written permission to test
 - Defensive security training to understand attack vectors
 - Improving your own system security through controlled testing
+
+
+## Maintainers
+- [@KaliThermal](https://github.com/KaliThermal)
+- [@leonvest](https://github.com/leonvest)
